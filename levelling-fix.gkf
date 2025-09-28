@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<gama-local xmlns="http://www.gnu.org/software/gama/gama-local">
+<network axes-xy="en" angles="left-handed">
+
+<!-- Example of FAP levelling network
+-->
+
+<description>
+Fix height network
+
+FAP networks adjustment 2018 example 3.1
+</description>
+
+<!-- sigma-apr/sigma0 gon to cc -->
+<parameters
+   sigma-apr = "1.000000"
+   conf-pr   = " 0.95 "
+   tol-abs   = " 1000 "
+   sigma-act = "aposteriori"
+   algorithm = "gso"
+   cov-band  = "-1"
+/>
+
+<points-observations>
+
+<point id='3' x='' y='' z='0.0000' fix='z' />
+<point id='6' x='' y='' z='7.4453' adj='z' />
+<point id='9' x='' y='' z='-0.8738' adj='z' />
+
+<height-differences>
+<dh from='3' to='6' val='7.4453' stdev='0.3048' />
+<dh from='6' to='9' val='-8.3191' stdev='0.2669' />
+<dh from='9' to='3' val='0.8742' stdev='0.2860' />
+</height-differences>
+
+</points-observations>
+
+</network>
+</gama-local>
