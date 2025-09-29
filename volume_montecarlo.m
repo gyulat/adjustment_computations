@@ -31,8 +31,8 @@ for j=1:Nsim
 end
 
 printf('volume error std from %d runs: %.2f m³\n', Nsim, std(volerr))
-#    calculated volume: 35288.88 m³
-#    volume error std from 10000 runs: 18.77 m³
+%    calculated volume: 35288.88 m³
+%    volume error std from 10000 runs: 18.77 m³
 
 figure(1)
 hist(volerr, 30)
