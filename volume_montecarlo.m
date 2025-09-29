@@ -30,7 +30,7 @@ for j=1:Nsim
     volerr(j) = vol1-vol2 - vol12;
 end
 
-printf('volume error std from %d runs: %.2f m³\n', Nsim, std(volerr))
+fprintf('volume error std from %d runs: %.2f m³\n', Nsim, std(volerr))
 %    calculated volume: 35288.88 m³
 %    volume error std from 10000 runs: 18.77 m³
 
