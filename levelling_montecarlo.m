@@ -3,7 +3,7 @@
 %
 % Network consists of points 3, 6, 9. 
 % Height of point 3 is 0.00000 m, fixed
-
+clc; clear all; close all
 % height differences from adjusted point heights are the measurements
 obs = [7.44515, -8.31910, 0.87420];  % m
 % calculate standard errors for these measurements
