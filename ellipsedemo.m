@@ -1,8 +1,7 @@
-% RANSAC ellipse fit demo
-clear all
+% RANSAC ellipse fit demo (Octave 8.4.0/Matlab R2024a)
+clear all; close all
 % example data
-%d = load('ellipdata.txt');
-d = load('ellipdata1.txt'); % full ellipse
+d = load('ellipdata.txt'); % full ellipse
 x = d(:,1);  y = d(:,2); nd = length(x);
 tol = 0.25;  % fit threshold
 k = 145;  % number of iterations
@@ -35,7 +34,7 @@ for i=1:k
   end
 end
 
-printf("cardinality of maximum consensus set: %d\n",nmax)
+fprintf("cardinality of maximum consensus set: %d\n",nmax)
 plot(xin,yin,'go')
 ell = @(x,y) x.^2+bp(1)*x.*y+bp(2)*y.^2+bp(3)*x+bp(4)*y+bp(5);
 ezplot(ell,[0,6,0,6])
@@ -46,7 +45,7 @@ C(6,6)=0; C(1,3)=2; C(2,2)=-1; C(3,1)=2;
 [gevec, geval] = eig(inv(S)*C);
 [posR, posC] = find(geval>0 & ~isinf(geval));
 pls = gevec(:,posC);
-a = (pls./pls(1))(2:end);
+a = (pls./pls(1)); a = a(2:end);
 ells = @(x,y) x.^2+a(1)*x.*y+a(2)*y.^2+a(3)*x+a(4)*y+a(5);
 h = ezplot(ells,[0,6,0,6]);
 set(h,"Color","red");
@@ -63,10 +62,10 @@ a2 = sqrt(-2*(a(6)-(a(3)*a(4)^2-a(2)*a(4)*a(5)+a(1)*a(5)^2)/(4*a(1)*a(3)-a(2)^2)
             /(a(1)+a(3) + sqrt(a(2)^2+(a(1)-a(3))^2)) );
 % orientation angle
 theta = 0.5*atan(a(2)/(a(1)-a(3)));
-printf("Ellipse parameters: \n");
-printf("xc: %.3f  yc: %.3f\n",xc,yc);  % xc: 2.694  yc: 1.875, original: (3,2)
-printf("a1: %.3f  a2: %.3f\n",a1,a2);  % a1: 1.129  a2: 1.590, original: 1.5, 2.5
-printf("theta: %.1f deg\n", theta*180/pi); % theta: 36.4, original: 30
+fprintf("Ellipse parameters: \n");
+fprintf("xc: %.3f  yc: %.3f\n",xc,yc);  % xc: 2.694  yc: 1.875, original: (3,2)
+fprintf("a1: %.3f  a2: %.3f\n",a1,a2);  % a1: 1.129  a2: 1.590, original: 1.5, 2.5
+fprintf("theta: %.1f deg\n", theta*180/pi); % theta: 36.4, original: 30
 
 
 % LSQ fit without RANSAC
@@ -77,7 +76,7 @@ C(6,6)=0; C(1,3)=2; C(2,2)=-1; C(3,1)=2;
 [gevec, geval] = eig(inv(S)*C);
 [posR, posC] = find(geval>0 & ~isinf(geval));
 pls = gevec(:,posC);
-a = (pls./pls(1))(2:end);
+a = (pls./pls(1)); a = a(2:end);
 ells = @(x,y) x.^2+a(1)*x.*y+a(2)*y.^2+a(3)*x+a(4)*y+a(5);
 figure(2); hold on
 plot(x,y,'ko')
@@ -96,10 +95,10 @@ a2 = sqrt(-2*(a(6)-(a(3)*a(4)^2-a(2)*a(4)*a(5)+a(1)*a(5)^2)/(4*a(1)*a(3)-a(2)^2)
             /(a(1)+a(3) + sqrt(a(2)^2+(a(1)-a(3))^2)) );
 % orientation angle
 theta = 0.5*atan(a(2)/(a(1)-a(3)));
-printf("Ellipse parameters: \n");
-printf("xc: %.3f  yc: %.3f\n",xc,yc);  
-printf("a1: %.3f  a2: %.3f\n",a1,a2);  
-printf("theta: %.1f deg\n", theta*180/pi);
+fprintf("Ellipse parameters: \n");
+fprintf("xc: %.3f  yc: %.3f\n",xc,yc);  
+fprintf("a1: %.3f  a2: %.3f\n",a1,a2);  
+fprintf("theta: %.1f deg\n", theta*180/pi);
 
 pause()
 
