@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+<!DOCTYPE gama-local SYSTEM "http://www.gnu.org/software/gama/gama-local.dtd">
+
+<gama-local>
+<network axes-xy = "ne"  angles="left-handed">
+
+<description>
+Montsalvens monitoring network
+Caspary, W.F. (2000): Concepts of network and deformation analysis
+UNSW School of Geomatic Engineering, Monograph 11.
+Epoch 1. p.147 Table 10.1
+</description>
+
+
+<parameters
+    sigma-apr = "1.000"
+    conf-pr   = "0.950"
+    tol-abs   = "1000.000"
+    sigma-act = "apriori"
+/>
+
+<points-observations direction-stdev="3.00" distance-stdev="0.30 0.00 1.00" angle-stdev="4.50">
+
+<point id="1" x="100.103" y="100.011" adj="XY" />
+<point id="2" x="111.601" y="109.003" adj="XY" />
+<point id="3" x="122.181" y="144.013" adj="XY" />
+<point id="4" x="116.692" y="168.014" adj="XY" />
+<point id="6" x="87.661" y="134.199" adj="XY" />
+<point id="7" x="88.855" y="106.210" adj="XY" />
+<point id="9" x="129.551" y="161.867" adj="XY" />
+<point id="10" x="102.448" y="90.167" adj="xy" />
+<point id="11" x="126.676" y="96.814" adj="xy" />
+<point id="12" x="143.977" y="115.772" adj="xy" />
+<point id="13" x="145.687" y="140.429" adj="xy" />
+<point id="14" x="133.610" y="163.079" adj="xy" />
+
+<obs from="1">
+
+	 <direction to="2" val="0.00000" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="13" val="3.92813" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="14" val="26.65768" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="3" val="28.14169" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="9" val="29.46106" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="4" val="42.51533" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="6" val="79.96743" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="7" val="125.68087" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="10" val="272.63544" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="11" val="350.12485" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="12" val="379.70302" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <distance from="1" to="2" val="14.5970" from_dh="0.00000" to_dh="0.00000" stdev="0.30" />
+	 <distance from="1" to="3" val="49.2300" from_dh="0.00000" to_dh="0.00000" stdev="0.30" />
+	 <distance from="1" to="4" val="69.9970" from_dh="0.00000" to_dh="0.00000" stdev="0.30" />
+</obs>
+
+<obs from="2">
+
+	 <direction to="1" val="0.00000" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="10" val="28.95076" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="11" val="114.46143" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="12" val="170.86868" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="13" val="205.16361" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="14" val="233.14019" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="9" val="236.90870" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="3" val="239.06410" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="4" val="252.26800" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="6" val="306.12031" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="7" val="365.52605" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <distance from="2" to="3" val="36.5730" from_dh="0.00000" to_dh="0.00000" stdev="0.30" />
+	 <distance from="2" to="4" val="59.2300" from_dh="0.00000" to_dh="0.00000" stdev="0.30" />
+</obs>
+
+<obs from="3">
+
+	 <direction to="1" val="0.00000" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="10" val="7.24369" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="2" val="10.92332" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="11" val="35.65047" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="12" val="71.45038" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="13" val="119.97324" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="14" val="195.22762" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="9" val="204.68251" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="4" val="243.91905" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="6" val="347.23966" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="7" val="383.60808" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <distance from="3" to="4" val="24.6210" from_dh="0.00000" to_dh="0.00000" stdev="0.30" />
+</obs>
+
+<obs from="4">
+
+	 <direction to="1" val="0.00000" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="10" val="3.71152" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="2" val="9.75390" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="11" val="24.10203" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="3" val="29.54640" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="12" val="45.87412" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="13" val="66.81895" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="9" val="86.84505" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="14" val="97.16398" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="6" val="370.06912" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="7" val="388.29153" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+</obs>
+
+<obs from="6">
+
+	 <direction to="1" val="0.00000" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="7" val="380.49429" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="4" val="132.61652" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="3" val="95.41328" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+	 <direction to="2" val="26.15275" from_dh="0.00000" to_dh="0.00000" stdev="3.00" />
+</obs>
+
+
+</points-observations>
+
+</network>
+</gama-local>
+
